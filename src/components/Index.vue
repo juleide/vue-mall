@@ -177,11 +177,12 @@
 
 <style scoped>
     .container {
+        padding-bottom: 20px;
         background-color: #F6F6F6;
     }
 
     .content {
-        width: 1008px;
+        width: 1020px;
         margin: 0px auto;
     }
 

@@ -237,7 +237,7 @@
     }
 
     .shopping-cart-list {
-        padding: 3px 15px;
+        padding: 10px 15px 3px;
     }
 
     .shopping-cart-box {

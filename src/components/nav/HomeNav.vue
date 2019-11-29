@@ -8,93 +8,99 @@
             </ul>
         </div>
         <div class="nav-body">
-            <!-- 侧边导航 -->
-            <div class="nav-side" ref="navSide">
-                <ul>
-                    <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
-                        <span class="nav-side-item">家用电器</span>
-                    </li>
-                    <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
-                        <span class="nav-side-item">手机</span> /
-                        <span class="nav-side-item">运营商</span> /
-                        <span class="nav-side-item">数码</span>
-                    </li>
-                    <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
-                        <span class="nav-side-item">电脑</span> /
-                        <span class="nav-side-item">办公</span>
-                    </li>
-                    <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
-                        <span class="nav-side-item">家居</span> /
-                        <span class="nav-side-item">家具</span> /
-                        <span class="nav-side-item">家装</span> /
-                        <span class="nav-side-item">厨具</span>
-                    </li>
-                    <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
-                        <span class="nav-side-item">男装</span> /
-                        <span class="nav-side-item">女装</span> /
-                        <span class="nav-side-item">童装</span> /
-                        <span class="nav-side-item">内衣</span>
-                    </li>
-                    <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
-                        <span class="nav-side-item">美妆个护</span> /
-                        <span class="nav-side-item">宠物</span>
-                    </li>
-                    <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
-                        <span class="nav-side-item">女鞋</span> /
-                        <span class="nav-side-item">箱包</span> /
-                        <span class="nav-side-item">钟表</span> /
-                        <span class="nav-side-item">珠宝</span>
-                    </li>
-                    <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
-                        <span class="nav-side-item">男鞋</span> /
-                        <span class="nav-side-item">运动</span> /
-                        <span class="nav-side-item">户外</span>
-                    </li>
-                    <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
-                        <span class="nav-side-item">汽车</span> /
-                        <span class="nav-side-item">汽车用品</span>
-                    </li>
-                    <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
-                        <span class="nav-side-item">母婴</span> /
-                        <span class="nav-side-item">玩具乐器</span>
-                    </li>
-                    <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
-                        <span class="nav-side-item">食品</span> /
-                        <span class="nav-side-item">酒类</span> /
-                        <span class="nav-side-item">生鲜</span> /
-                        <span class="nav-side-item">特产</span>
-                    </li>
-                    <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
-                        <span class="nav-side-item">礼品鲜花</span> /
-                        <span class="nav-side-item">农资绿植</span>
-                    </li>
-                    <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
-                        <span class="nav-side-item">医药保健</span> /
-                        <span class="nav-side-item">计生情趣</span>
-                    </li>
-                    <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
-                        <span class="nav-side-item">图书</span> /
-                        <span class="nav-side-item">音像</span> /
-                        <span class="nav-side-item">电子书</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav-content">
-                <!-- 幻灯片 -->
-                <div>
-                    <Carousel autoplay loop>
-                        <CarouselItem v-for="(item, index) in marketing.CarouselItems" :key="index">
+            <div class="nav-body-inner">
+                <!-- 侧边导航 -->
+                <div class="nav-side" ref="navSide">
+                    <div class="logo-con" data-spm="2015002">
+                        <img class="tmall-logo-img" src="static/img/nav/nav_showimg1.jpg" style="margin: 1px auto;display:block" width="210px" height="100px">
+                    </div>
+                    <div class="nav-title">商品分类</div>
+                    <ul>
+                        <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
+                            <span class="nav-side-item">家用电器</span>
+                        </li>
+                        <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
+                            <span class="nav-side-item">手机</span> /
+                            <span class="nav-side-item">运营商</span> /
+                            <span class="nav-side-item">数码</span>
+                        </li>
+                        <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
+                            <span class="nav-side-item">电脑</span> /
+                            <span class="nav-side-item">办公</span>
+                        </li>
+                        <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
+                            <span class="nav-side-item">家居</span> /
+                            <span class="nav-side-item">家具</span> /
+                            <span class="nav-side-item">家装</span> /
+                            <span class="nav-side-item">厨具</span>
+                        </li>
+                        <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
+                            <span class="nav-side-item">男装</span> /
+                            <span class="nav-side-item">女装</span> /
+                            <span class="nav-side-item">童装</span> /
+                            <span class="nav-side-item">内衣</span>
+                        </li>
+                        <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
+                            <span class="nav-side-item">美妆个护</span> /
+                            <span class="nav-side-item">宠物</span>
+                        </li>
+                        <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
+                            <span class="nav-side-item">女鞋</span> /
+                            <span class="nav-side-item">箱包</span> /
+                            <span class="nav-side-item">钟表</span> /
+                            <span class="nav-side-item">珠宝</span>
+                        </li>
+                        <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
+                            <span class="nav-side-item">男鞋</span> /
+                            <span class="nav-side-item">运动</span> /
+                            <span class="nav-side-item">户外</span>
+                        </li>
+                        <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
+                            <span class="nav-side-item">汽车</span> /
+                            <span class="nav-side-item">汽车用品</span>
+                        </li>
+                        <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
+                            <span class="nav-side-item">母婴</span> /
+                            <span class="nav-side-item">玩具乐器</span>
+                        </li>
+                        <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
+                            <span class="nav-side-item">食品</span> /
+                            <span class="nav-side-item">酒类</span> /
+                            <span class="nav-side-item">生鲜</span> /
+                            <span class="nav-side-item">特产</span>
+                        </li>
+                        <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
+                            <span class="nav-side-item">礼品鲜花</span> /
+                            <span class="nav-side-item">农资绿植</span>
+                        </li>
+                        <li @mouseenter="showDetail(1)" @mouseleave="hideDetail(1)">
+                            <span class="nav-side-item">医药保健</span> /
+                            <span class="nav-side-item">计生情趣</span>
+                        </li>
+                        <li @mouseenter="showDetail(2)" @mouseleave="hideDetail(2)">
+                            <span class="nav-side-item">图书</span> /
+                            <span class="nav-side-item">音像</span> /
+                            <span class="nav-side-item">电子书</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-content">
+                    <!-- 幻灯片 -->
+                    <div>
+                        <Carousel autoplay loop :autoplay-speed="4000">
+                            <CarouselItem v-for="(item, index) in marketing.CarouselItems" :key="index">
+                                <router-link to="/goodsList">
+                                    <img :src="item">
+                                </router-link>
+                            </CarouselItem>
+                        </Carousel>
+                    </div>
+                    <div class="nav-show">
+                        <div class="nav-show-img" v-for="(item, index) in marketing.activity" :key="index">
                             <router-link to="/goodsList">
                                 <img :src="item">
                             </router-link>
-                        </CarouselItem>
-                    </Carousel>
-                </div>
-                <div class="nav-show">
-                    <div class="nav-show-img" v-for="(item, index) in marketing.activity" :key="index">
-                        <router-link to="/goodsList">
-                            <img :src="item">
-                        </router-link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -292,14 +298,15 @@
 
 <style scoped>
     .nav-item {
-        width: 680px;
+        width: 1020px;
         height: 36px;
+        line-height: 36px;
         margin: 0px auto;
     }
 
     .nav-item ul {
         list-style: none;
-        margin-left: 15px;
+        margin-left: 210px;
     }
 
     .nav-item li {
@@ -321,18 +328,42 @@
 
     /*大的导航信息，包含导航，幻灯片等*/
     .nav-body {
-        width: 1020px;
         height: 485px;
-        margin: 0px auto;
+        background: #fff;
+    }
+
+    .nav-body .nav-body-inner {
+        width: 1020px;
+        margin: 0 auto;
     }
 
     .nav-side {
-        width: 200px;
+        position: relative;
+        width: 210px;
         height: 100%;
         padding: 0px;
         color: #fff;
         float: left;
         background-color: #6e6568;
+    }
+
+    .nav-side .nav-title {
+        position: absolute;
+        width: 210px;
+        height: 36px;
+        line-height: 36px;
+        top: -36px;
+        left: 0;
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 15px;
+        background: #FF0036;
+    }
+
+    .nav-side .logo-con {
+        position: absolute;
+        top: -138px;
+        left: 0;
     }
 
     .nav-side ul {
@@ -368,7 +399,6 @@
 
     /*导航图片*/
     .nav-show-img {
-        margin-top: 10px;
         float: left;
     }
 
